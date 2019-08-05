@@ -15,4 +15,11 @@ while counter:
     # Augmented Operator
     counter -= 1
 
+while True:
+    print("Enter a  number")
+    response = input()  # take user input
+    if int(response) % 7 == 0:
+        break           # exit loop
+
+
 print("outside while loop")
