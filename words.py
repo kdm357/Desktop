@@ -2,13 +2,13 @@
 get a file from the web
 http://icarus.cs.weber.edu/~hvalle/hafb/words.txt
 
-task#1: count number of words in document
+
 """
 
 from urllib.request import urlopen
 
 
-def fetch_words(filename):
+def fetch_words(file):
     """
     fetch words from file
     :return:
@@ -16,7 +16,6 @@ def fetch_words(filename):
 
 # Task #2
 from urllib.request import urlopen
-file = "http://icarus.cs.weber.edu/~hvalle/hafb/words.txt"
 data = []
 count = 0
 with urlopen(file) as story:
