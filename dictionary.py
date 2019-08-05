@@ -15,3 +15,13 @@ print(d, type(d))
 
 #access an element
 print(d['pedro'])
+
+#add members to the dictionary, of names-> grades
+roster = {} # empty dictionary
+counter = 0
+while counter < 3:
+     name = input("Enter name:")
+     grade = input("Enter Grade:")
+     roster[name] = grade
+     counter += 1
+print(roster)
