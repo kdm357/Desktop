@@ -24,3 +24,13 @@ print(s4)
 # support fo rbackslash
 s5 = "A\\in a string"
 print(s5)
+
+# raw strings
+raw_string = r'c:\user\documents\books'
+print(raw_string)
+
+# string as sequesnce
+s = "parrot"
+print("s[4]", s[4], type(s))
+
+print (s.capitalize())
