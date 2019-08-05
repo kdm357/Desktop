@@ -18,11 +18,14 @@ with urlopen(file) as story:
 # Task #2
 from urllib.request import urlopen
 file = "http://icarus.cs.weber.edu/~hvalle/hafb/words.txt"
-word_count = {}
+data = {}
 count = 0
 with urlopen(file) as story:
     for line in story:
         words = line.decode('utf-8').split()
         for word in words:
-            word_count[word] =
-            print(word)
+            if word in data:
+                data[word] += 1
+            else:
+                data[word] = 1
+    print(data)
