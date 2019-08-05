@@ -4,28 +4,39 @@ http://icarus.cs.weber.edu/~hvalle/hafb/words.txt
 
 task#1: count number of words in document
 """
-from urllib.request import urlopen
-file = "http://icarus.cs.weber.edu/~hvalle/hafb/words.txt"
 
-count = 0
-with urlopen(file) as story:
-    for line in story:
-        words = line.decode('utf-8').split()
-        for word in words:
-            count += 1
-        print(count)
+from urllib.request import urlopen
+
+
+def fetch_words(filename):
+    """
+    fetch words from file
+    :return:
+    """
 
 # Task #2
 from urllib.request import urlopen
 file = "http://icarus.cs.weber.edu/~hvalle/hafb/words.txt"
-data = {}
+data = []
 count = 0
 with urlopen(file) as story:
     for line in story:
         words = line.decode('utf-8').split()
         for word in words:
-            if word in data:
-                data[word] += 1
-            else:
-                data[word] = 1
-    print(data)
+            data.append(word)
+    return data
+
+
+def main():
+    """
+
+    :return:
+    """
+
+file = "http://icarus.cs.weber.edu/~hvalle/hafb/words.txt"
+fetch_words(file)
+
+
+if __name__ == "__main__":
+    main()
+    exit(0)
