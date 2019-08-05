@@ -26,7 +26,7 @@ print("Boolean const. bool([])", bool([1,2,3,4]))
 # Relational operator:  ==, !=, <, >,
 a=12
 print("a == 12", a ==12)
-
+print(0)
 
 
 
