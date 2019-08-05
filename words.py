@@ -14,17 +14,25 @@ def fetch_words(file):
     :return:
     """
 
-# Task #2
-from urllib.request import urlopen
-data = []
-count = 0
-with urlopen(file) as story:
-    for line in story:
-        words = line.decode('utf-8').split()
-        for word in words:
-            data.append(word)
-    return data
+    data = []
+    count = 0
+    with urlopen(file) as story:
+        for line in story:
+            words = line.decode('utf-8').split()
+            for word in words:
+                data.append(word)
+        return data
 
+
+
+def print_items(items):
+    """
+
+    :param items:
+    :return:
+    """
+    for item in items:
+        print(items)
 
 def main():
     """
@@ -32,9 +40,9 @@ def main():
     :return:
     """
 
-file = "http://icarus.cs.weber.edu/~hvalle/hafb/words.txt"
-fetch_words(file)
-
+    file = "http://icarus.cs.weber.edu/~hvalle/hafb/words.txt"
+    info = fetch_words(file)
+    print (info)
 
 if __name__ == "__main__":
     main()
