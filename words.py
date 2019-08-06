@@ -44,6 +44,6 @@ def main():
     info = fetch_words(file)
     print (info)
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
     exit(0)
