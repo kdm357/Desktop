@@ -11,7 +11,7 @@ from urllib.request import urlopen
 def fetch_words(file):
     """
     fetch words from file
-    :return:
+    :return: data
     """
 
     data = []
@@ -36,13 +36,14 @@ def print_items(items):
 
 def main():
     """
-
-    :return:
+    test function for words library
+    :return: nohing
     """
 
     file = "http://icarus.cs.weber.edu/~hvalle/hafb/words.txt"
     info = fetch_words(file)
-    print (info)
+    print_items (info)
+
 
 if __name__ == '__main__':
     main()
