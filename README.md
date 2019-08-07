@@ -8,4 +8,12 @@
 - Basics of iterations
 - Basics of functions (**def**)
 - The Condept of modularity
-- 
+
+## Day 2 Summary
+- Learn about opening youtube video (web browser)
+- Learn about time module
+- Learn about definitions
+    - Required parameters
+    - optional parameters
+- Learn about tuples and unpacking tuples
+- Learn about strings
