@@ -46,6 +46,14 @@ def main():
     smell_hcn = {"Harry","Amelia"}
     taste_ptc = {"Harry","Lilly","Lola"}
     o_blood = {"Joshua","Lola"}
+    b_blood = {"Amelia","Jack"}
+    a_blood = {"Harry"}
+    ab_blood = {"Joshua","Lola"}
+    print(blue_eyes.union(blonde_hair))
+    print(blue_eyes.intersection(taste_ptc))
+    print(smell_hcn.symmetric_difference(a_blood))
+    print(blonde_hair.difference(ab_blood))
+    print(taste_ptc.issuperset(smell_hcn))
 
 
 
