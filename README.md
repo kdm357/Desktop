@@ -17,3 +17,17 @@
     - optional parameters
 - Learn about tuples and unpacking tuples
 - Learn about strings
+
+# Day 3 Summary
+- Complete our discussionon collections
+    - list
+    - dictionaries
+    - strings
+    - tuples
+    - range
+    - sets
+
+# Basis of exceptions: **try, except, throw**
+- Comprehensions
+
+
