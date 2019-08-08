@@ -63,6 +63,17 @@ class Flight:
                     for row in self._seating
                     if row is not None)
 
+    def make_boarding_pass(self,card_printer):
+        for passenger, seat in sorted(self._passenger_seats()):
+            card_printer(passenger, seat, self._number(), self._aircraft.model())
+
+    def _passenger_seats(self):
+        row_numbers, seat_letters = self.seating_plan()
+        for row in row_numbers:
+            for letter in seat_letters:
+                passenger = self._seating[row][letter]
+                if passenger is not None:
+                    yield (passenger, "{}{}".format(row, letter))
 
 class Aircraft:
 

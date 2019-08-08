@@ -19,6 +19,21 @@ def make_flight():
     f1ight.allocate_seat("03A", "Yudihiro Matsumoto")
     return f1ight
 
+
+def console_card_printer(passenger, seat, flight_number, aircraft):
+    output = "| Name: {0}" \
+             "| Fllight: {1}" \
+             "| Seat: {2}" \
+             "| Aircraft: {3}" \
+             "|".format(passenger, flight_number, seat, aircraft)
+    banner = "+" + "-" * (len(output) - 2) + "+"
+    border = "|" + " " * (len(output) - 2) + "|"
+    lines = [banner, border, output, border, banner]
+    card = '/n'.join(lines)
+    print(card)
+    print()
+
+
 def main():
     """
     test function for words library
@@ -27,6 +42,7 @@ def main():
     flight1 = make_flight()
     pp(flight1._seating)
     print("",flight1.num_available_seats())
+    flight1.make_boarding_pass(console_card_printer())
 
 if __name__ == '__main__':
     main()
