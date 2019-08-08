@@ -58,11 +58,6 @@ class Flight:
         self._seating[row][letter] = passenger
 
 
-    def num_available_seats(self):
-        return sum(sum(1 for s in row.values() if s is None)
-                    for row in self._seating
-                    if row is not None)
-
 
 class Aircraft:
 
